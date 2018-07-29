@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utd-8"/>
+	<link href="01Hstyle.css" rel="stylesheet" type="text/css"/>
+	<title>friday_13 </title>
+	<script type="text/javascript" href="javascript.js"></script>
+
+
+</head>
+	<body>
+		<script type="text/javascript">
+			
+			var numberOfFridey13 = 0; 
+			
+			var year = prompt("what year are you interested in?");
+			if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+			
+				for (var i = 0; i < 12; i++) {
+					var date =  new Date(year, i, 13);
+					if (date.getDay() == 5) {
+					numberOfFridey13++;
+						 document.write(date + "<hr/>");
+					}
+				} 
+			} else ( alert ("Your year is not Leep"));
+			 alert("number of Fr-13: " + numberOfFridey13);
+
+
+			
+		
+		</script>
+	
+	</body>
+	</html>
+	
